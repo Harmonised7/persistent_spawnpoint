@@ -1,0 +1,13 @@
+modLoader="javafml"
+       loaderVersion="[31.1,)"
+
+       [[mods]]
+           modId="pspawn"
+           version="${file.jarVersion}"
+           displayName="Persistent Spawnpoint"
+           displayURL="https://www.curseforge.com/minecraft/mc-mods/pspawn"
+           credits="Me"
+           authors="Harmonised"
+           description='''
+           Ensures your spawnpoint isn't magically changed/dissapears
+           '''

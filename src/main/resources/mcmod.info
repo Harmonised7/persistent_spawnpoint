@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pspawn",
+  "name": "Persistent Spawnpoint",
+  "description": "Ensures your spawnpoint isn't magically changed/dissapears",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Harmonised#6495"],
+  "credits": "Me",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
