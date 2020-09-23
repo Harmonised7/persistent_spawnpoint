@@ -2,14 +2,14 @@ buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
         maven { url  = 'https://plugins.gradle.org/m2/' }
-        maven { url='https://dist.creeper.host/Sponge/maven' }
+//        maven { url='https://dist.creeper.host/Sponge/maven' }
         jcenter()
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
         classpath "com.wynprice.cursemaven:CurseMaven:2.1.1"
-        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
+//        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
 
@@ -18,7 +18,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: "com.wynprice.cursemaven"
 
-version = '1.15.2-1.0'
+version = '1.15.2-0.8477'
 group = 'harmonised.pspawn'
 archivesBaseName = 'Persistent Spawnpoint'
 
@@ -32,7 +32,7 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
-            arg "-mixin.config="+modid+".mixins.json"
+//            arg "-mixin.config="+modid+".mixins.json"
             mods {
                 examplemod {
                     source sourceSets.main
@@ -43,7 +43,7 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
-            arg "-mixin.config="+modid+".mixins.json"
+//            arg "-mixin.config="+modid+".mixins.json"
             mods {
                 examplemod {
                     source sourceSets.main
@@ -86,7 +86,7 @@ repositories
 
     maven { url "http://dvs1.progwml6.com/files/maven/" }
     maven { url = "https://maven.theillusivec4.top/" }
-    maven { url='https://dist.creeper.host/Sponge/maven' }
+//    maven { url='https://dist.creeper.host/Sponge/maven' }
 
     jcenter()
     mavenCentral()
@@ -98,7 +98,7 @@ dependencies
     minecraft 'net.minecraftforge:forge:1.15.2-31.2.36'
     implementation 'com.google.code.gson:gson:2.8.6'
 
-    compile 'org.spongepowered:mixin:0.8'
+//    compile 'org.spongepowered:mixin:0.8'
 
     compileOnly fg.deobf("mezz.jei:jei-1.15.2:6.0.3.15:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.15.2:6.0.3.15")
@@ -116,7 +116,7 @@ jar {
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"pspawnsareus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-            "MixinConfigs": "${modid}.mixins.json"
+//            "MixinConfigs": "${modid}.mixins.json"
         ])
     }
 }
@@ -139,8 +139,8 @@ publishing {
     }
 }
 
-apply plugin: 'org.spongepowered.mixin'
-
-mixin {
-    add sourceSets.main, "${modid}.refmap.json"
-}
+//apply plugin: 'org.spongepowered.mixin'
+//
+//mixin {
+//    add sourceSets.main, "${modid}.refmap.json"
+//}

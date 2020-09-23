@@ -1,18 +1,25 @@
 package harmonised.pspawn.events;
 
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.*;
-import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.event.entity.player.*;
-import net.minecraftforge.event.world.*;
-import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.server.FMLServerStoppingEvent;
 
 @Mod.EventBusSubscriber
 public class EventHandler
 {
+//    @SubscribeEvent
+//    public static void playerLoggedIn( PlayerEvent.PlayerLoggedInEvent event )
+//    {
+//        PlayerHandler.playerLoggedIn( event );
+//    }
 
+    @SubscribeEvent
+    public static void livingDeath( LivingDeathEvent event )
+    {
+        PlayerHandler.handleLivingDeath( event );
+    }
 }
