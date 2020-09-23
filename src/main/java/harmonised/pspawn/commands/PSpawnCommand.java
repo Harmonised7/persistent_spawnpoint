@@ -11,9 +11,12 @@ public class PSpawnCommand
     {
         dispatcher.register( Commands.literal( "pspawn" )
         .executes( PSpawnSingleCommand::execute )
-        .requires( player -> player.hasPermissionLevel( 2 ))
         .then( Commands.argument( "target", EntityArgument.players())
+        .requires( player -> player.hasPermissionLevel( 2 ))
         .executes( PSpawnSingleCommand::execute )
         ));
+
+        dispatcher.register( Commands.literal( "pspawn'nt")
+        .executes( PSpawnntCommand::execute ));
     }
 }

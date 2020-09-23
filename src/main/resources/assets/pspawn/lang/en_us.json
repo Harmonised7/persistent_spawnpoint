@@ -3,5 +3,6 @@
   "minecraft:nether": "Nether",
   "minecraft:the_end": "The End",
   "pspawn.spawnpointSet": "Your Spawnpoint has been set to x:%1$s|y:%2$s|z:%3$s",
+  "pspawn.spawnpointRemoved": "Your Spawnpoint is no longer Persistent",
   "pspawn.onlyAvailableInOverworld": "This command is only available in Overworld"
 }

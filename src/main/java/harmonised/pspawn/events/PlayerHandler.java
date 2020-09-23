@@ -64,4 +64,10 @@ public class PlayerHandler
         PSpawnSavedData.get( player ).setSpawnPoint( player.getUniqueID(), pos, dimType );
         player.sendMessage( new TranslationTextComponent( "pspawn.spawnpointSet", pos.getX(), pos.getY(), pos.getZ(), new TranslationTextComponent( player.dimension.getRegistryName().toString() ).getString() ) );
     }
+
+    public static void removeSpawnpoint( ServerPlayerEntity player )
+    {
+        PSpawnSavedData.get( player ).removeSpawnpoint( player.getUniqueID() );
+        player.sendMessage( new TranslationTextComponent( "pspawn.spawnpointRemoved" ) );
+    }
 }

@@ -79,6 +79,12 @@ public class PSpawnSavedData extends WorldSavedData
         this.markDirty();
     }
 
+    public  void removeSpawnpoint( UUID uuid )
+    {
+        spawnMap.remove( uuid );
+        this.markDirty();
+    }
+
     public SpawnData getSpawnData( UUID uuid )
     {
         return spawnMap.get( uuid );
