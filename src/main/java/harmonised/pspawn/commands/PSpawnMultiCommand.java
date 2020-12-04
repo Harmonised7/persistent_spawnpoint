@@ -31,7 +31,7 @@ public class PSpawnMultiCommand
             return 0;
         }
 
-        if( sender.world.dimension.getType().equals(DimensionType.OVERWORLD ) )
+        if( sender.world.dimension.getType().equals( DimensionType.OVERWORLD ) )
             PlayerHandler.setSpawnpoint( sender );
         else
         {
