@@ -1,7 +1,8 @@
 package harmonised.pspawn.pspawn_saved_data;
 
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.dimension.DimensionType;
+import net.minecraft.world.DimensionType;
+
 
 public class SpawnData
 {

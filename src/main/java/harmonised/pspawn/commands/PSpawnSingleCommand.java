@@ -8,8 +8,7 @@ import net.minecraft.command.CommandException;
 import net.minecraft.command.CommandSource;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.dimension.DimensionType;
-
+import net.minecraft.world.DimensionType;
 
 public class PSpawnSingleCommand
 {
@@ -27,11 +26,11 @@ public class PSpawnSingleCommand
             return 0;
         }
 
-        if( sender.world.dimension.getType().equals(DimensionType.OVERWORLD ) )
+        if( sender.world.getDimensionType().equals( DimensionType.OVERWORLD ) )
             PlayerHandler.setSpawnpoint( sender );
         else
         {
-            sender.sendMessage( new TranslationTextComponent( "pspawn.onlyAvailableInOverworld" ) );
+            sender.sendStatusMessage( new TranslationTextComponent( "pspawn.onlyAvailableInOverworld" ), false );
             LogHandler.LOGGER.error( "PSpawn was called not from Overworld, which is not supported");
         }
 

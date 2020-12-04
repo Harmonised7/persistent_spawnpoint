@@ -7,7 +7,7 @@ import net.minecraft.nbt.NBTUtil;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.dimension.DimensionType;
+
 import net.minecraft.world.storage.WorldSavedData;
 
 import java.util.HashMap;

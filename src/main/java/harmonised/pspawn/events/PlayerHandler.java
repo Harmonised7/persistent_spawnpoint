@@ -3,13 +3,15 @@ package harmonised.pspawn.events;
 import harmonised.pspawn.pspawn_saved_data.PSpawnSavedData;
 import harmonised.pspawn.pspawn_saved_data.SpawnData;
 import harmonised.pspawn.util.LogHandler;
+import harmonised.pspawn.util.ResLocHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.SpawnLocationHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-import net.minecraft.world.dimension.DimensionType;
+
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
 public class PlayerHandler
@@ -24,12 +26,15 @@ public class PlayerHandler
             if( spawnData != null )
             {
                 BlockPos spawnPos = spawnData.pos;
-                if( player.world.dimension.getType().equals( spawnData.dimType ) )
+                if( player.world.getDimensionType().equals( spawnData.dimType ) )
                 {
                     player.setPositionAndRotation( spawnPos.getX(), spawnPos.getY(), spawnPos.getZ(), 0, 0 );
                     spawnPos = getSafePos( player );
                 }
-                player.setSpawnPoint( spawnPos, true, true, spawnData.dimType );
+                spawnData.dimType.ge
+                serverplayerentity.func_242111_a(registrykey, pos, p_198696_3_, true, false);
+                player.func_242111_a(ResLocHelper.getDimensionResLoc(  ) ));
+                player.set( spawnPos, true, true, spawnData.dimType );
             }
         }
     }
